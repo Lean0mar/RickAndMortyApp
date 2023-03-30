@@ -32,7 +32,7 @@ This project uses the [Rick & Morty API](https://rickandmortyapi.com/) to displa
 
 <h2 align="left">⚡ Contributors</h2>
 
-- Leandro Martinez
+- [Leandro Martinez]("https://www.linkedin.com/in/lean0mar")
 
 <h2 align="left"> Acknowledgments</h2>
 

@@ -1,0 +1,41 @@
+.infoProyect {
+    width: 80%;
+    background-color: antiquewhite;
+    background: rgb(red, green, blue);
+    z-index: 2;
+    margin: 110px auto;
+    max-height: 800px;
+    padding: 18px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  .info2Proyect {
+    width: 80%;
+    background: rgb(red, green, blue);
+    z-index: 2;
+    margin: 110px auto;
+    max-height: 800px;
+    padding: 18px;
+    color: rgb(red, green, blue);
+    background-color: antiquewhite;
+    display: block;
+  }
+  
+  a,
+  a:hover {
+    color: rgb(red, green, blue)
+  }
+  b {
+    color: rgb(red, green, blue)
+  }
+  .imgProyect {
+    width: 20%;
+    border: solid 5px rgb(red, green, blue);
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 10px;
+  }
+  

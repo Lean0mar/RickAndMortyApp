@@ -1,0 +1,94 @@
+.Cards{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    }
+    
+    .Card{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 80px; /* valor de margen superior más pequeño */
+      margin-left: 45px;
+      width: 20vw; /* ajusta el ancho */
+      flex-direction: column;
+      gap: .5rem;
+      background-color: gainsboro;
+      border-radius: .5rem;
+    }
+    
+    
+    .Top{
+      display: flex;
+      width: 100%;
+    }
+  
+    .Fav{
+      display: flex;
+      justify-content: left;
+      gap: 1em;
+      width: 100%;
+    }
+    .Exit{
+      display: flex;
+      justify-content: right;
+      gap: 1em;
+      width: 100%;
+    }
+    
+    .botoExit{
+      cursor: pointer;
+      margin: 5px;
+      color: white;
+      background-color: red;
+      border-radius: .2rem;
+      border-color: gray;
+      border-width: 1px;
+    }
+  
+    .botoFav{
+      cursor: pointer;
+      margin: 5px;
+      color: white;
+      background-color: white;
+      border: 0;
+    }
+    
+    .imgCard{
+      border-radius: .5rem;
+      width: 90%;
+      height: 60%;
+      object-fit: cover;
+    }
+    
+    
+    .nameCard{
+      position: absolute;
+      display: flex;
+      left: 3%;
+      bottom: 15%;
+      color: white;
+      background-color: black;
+      opacity: 60%;
+      text-align: center;
+      
+    }
+    
+    .infoCard{
+      width: 40%;
+      height: min-content;
+      padding-bottom: .5rem;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+    }
+    
+    
+    h2{
+      margin: 0;
+    }

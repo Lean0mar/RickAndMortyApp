@@ -1,0 +1,10 @@
+.errorTitle {
+    font-size: 4rem;
+    color: #f00;
+  }
+  
+  .errorMessage {
+    font-size: 2rem;
+    color: #333;
+  }
+  

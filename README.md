@@ -3,8 +3,8 @@ This is a project integrating the Rick & Morty API to display information about 
 
 <h2 align="left">📄 Features</h2>
 
-- Browse characters
-- Search for specific characters
+- Browse characters.
+- Search for specific characters.
 - See details about each character, including their image, species, status and more.
 
 <h2 align="left">💻 Technologies</h2>

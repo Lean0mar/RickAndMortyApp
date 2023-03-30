@@ -1,5 +1,5 @@
 <h1 align="center">Rick & Morty Project! 👋</h1>
-This is a project integrating the Rick & Morty API to display information about the characters, episodes and locations from the show. 
+This is a project integrating the Rick & Morty API to display information about the characters
 
 <h2 align="left">📄 Features</h2>
 

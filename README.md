@@ -1,29 +1,29 @@
 <h1 align="center">Rick & Morty Project! 👋</h1>
-This is a project integrating the Rick & Morty API to display information about the characters
+This is a project integrating the Rick & Morty API to display information about the characters.
 
 <h2 align="left">📄 Features</h2>
 
 - Browse characters
 - Search for specific characters
-- See details about each character, including their image, species, status and more
+- See details about each character, including their image, species, status and more.
 
 <h2 align="left">💻 Technologies</h2>
 
 
 This project was built using:
 
-- React
-- React Router
-- React Router Dom
-- React Dom
-- React Redux
-- Redux
-- Redux Thunk
-- Axios
-- Morgan
-- Nodemon
-- Dotenv
-- Cors
+- React.
+- React Router.
+- React Router Dom.
+- React Dom.
+- React Redux.
+- Redux.
+- Redux Thunk.
+- Axios.
+- Morgan.
+- Nodemon.
+- Dotenv.
+- Cors.
 
 <h2 align="left">🌐 API Reference</h2>
 

@@ -33,7 +33,7 @@ const Form = (props) => {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        props.Login(userData)
+        props.login(userData)
         
         const propsArray = Object.keys(errors)
         if (propsArray.length === 0){

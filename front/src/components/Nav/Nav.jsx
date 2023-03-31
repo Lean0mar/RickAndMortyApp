@@ -1,11 +1,16 @@
 import SearchBar from "../SearchBar/SearchBar";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Nav.module.css";
 import icon from "../../img/icon-name.png";
+import React from "react";
 
-const Nav = ({ onSearch, randomCharacter, logout }) => {
-  const url = useLocation();
-  if (url.pathname !== "/") {
+class Nav extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
       <nav className={styles.NavBar}>
         <div className={styles.menuLists}>
@@ -18,7 +23,7 @@ const Nav = ({ onSearch, randomCharacter, logout }) => {
             <Link to="/home" className={styles.menuLink}>
               <h3>Home</h3>
             </Link>
-            <Link onClick={randomCharacter} className={styles.menuLink}>
+            <Link onClick={this.props.randomCharacter} className={styles.menuLink}>
             <h3>Aleatorio</h3>
             </Link>
             <Link to="/favorites" className={styles.menuLink}>
@@ -26,10 +31,10 @@ const Nav = ({ onSearch, randomCharacter, logout }) => {
             </Link>
           </div>
           <div className={styles.Searchbar}>
-          <SearchBar onSearch={onSearch} className={styles.searchBar} />
+          <SearchBar onSearch={this.props.onSearch} className={styles.searchBar} />
           </div>
             <div className={styles.searchLogout}>
-            <button onClick={logout}>Logout</button>
+            <button onClick={this.props.logout}>Logout</button>
           </div>
         </div>
       </nav>

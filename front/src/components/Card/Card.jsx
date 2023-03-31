@@ -1,28 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import { connect } from "react-redux";
-import { removeFavorite } from "../../redux/actions";
+import { connect, useDispatch } from "react-redux";
+import { removeFavorite, getFavorites } from "../../redux/actions";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 
 
-function Card({
-  id,
-  name,
-  species,
-  gender,
-  image,
-  onClose,
-  removeFavorite,
-  myFavorites,
-}) {
+function Card({ id, name, species, gender, image, onClose, myFavorites }) {
   const [isFav, setIsFav] = useState(false);
+  const dispatch = useDispatch();
 
   const addFavorite = (character) => {
-    axios.post("http://localhost:3001/rickandmorty/fav", character)
-    .then((response) => console.log("ok"));
-  }
+    axios
+      .post("http://localhost:3001/rickandmorty/fav", character)
+      .then((res) => console.log("ok"));
+  };
+
+  const removeFavorite = async (id) => {
+    await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
+    dispatch(getFavorites());
+    alert("Eliminado con éxito");
+  };
 
   const handleFavorite = () => {
     if (isFav) {
@@ -30,15 +29,13 @@ function Card({
       removeFavorite(id);
     } else {
       setIsFav(true);
+      //
       addFavorite({
         id,
         name,
         species,
         gender,
         image,
-        onClose,
-        addFavorite,
-        removeFavorite,
       });
     }
   };
@@ -84,14 +81,16 @@ function Card({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    removeFavorite: (id) => {dispatch(removeFavorite(id));},
+    removeFavorite: (id) => {
+      dispatch(removeFavorite(id));
+    },
   };
 };
 
 const mapStateToProps = (state) => {
   return {
-    myFavorites: state.myFavorites
-  }
-}
+    myFavorites: state.myFavorites,
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

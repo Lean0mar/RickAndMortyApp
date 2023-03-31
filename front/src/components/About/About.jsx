@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./About/Info.module.css";
+import styles from "./Info.module.css";
 
-import yo from "../img/me.jpg";
+import yo from "../../img/me.jpg";
 const About = (props) => {
   return (
     <>

@@ -1,5 +1,7 @@
+// import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "../Card/Card";
+// import { getFavorites } from "../../redux/actions";
 
 const Favorites = () => {
   const favorites = useSelector((state) => state.myFavorites);

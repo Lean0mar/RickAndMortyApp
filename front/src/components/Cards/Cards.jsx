@@ -1,9 +1,16 @@
 import Card from '../Card/Card';
 import styles from '../Card/Card.module.css';
+import { useDispatch } from "react-redux";
+import { getFavorites } from "../../redux/actions";
+import { useEffect } from "react";
 
+export default function Cards({ characters, onClose }) {
+   const dispatch = useDispatch();
+ 
+   useEffect(() => {
+     dispatch(getFavorites());
+   }, [dispatch]);
 
-export default function Cards({characters, onClose}) {
-   
    return (
       <div className={styles.Cards}>
          {

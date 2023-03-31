@@ -1,47 +1,22 @@
-import style from "../card/Card.module.css";
-import style2 from "../Form/Form.module.css";
-import style3 from "./Detail.module.css"
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import useCharacter from "../../hooks/useCharacter";
+import styles from "./Detail.module.css"
 
 const Detail = () => {
-  const [character, setCharacter] = useState({});
-  const URL_BASE = "https://localhost:3001/rickandmorty"
-  const { detailId } = useParams();
-
-  useEffect(() => {
-  
-    axios.get(`${URL_BASE}/detail/${detailId}`)
-    .then((response) => setCharacter(response.data));
-    // eslint-disable-next-line
-  }, []);
+  const character = useCharacter();
 
   return (
-    <div className={style3.ContainerDetail}>
-      <div className={style2.containerButton}>
-          <Link className={style2.button} to="/home">Home</Link>
-      </div>
+    <div className={styles.conteiner}>
       {character.name ? (
-        <div className={style.divContenedor}>
-          <div className={style.divContenedorImg}>
-            <img
-              className={style.imageCard}
-              src={character.image}
-              alt={character.name}
-            />
-          </div>
-          <div className={style.divContenedorInfo}>
-            <h2 className={style.linkCard}>{character.name}</h2>
-            <p className={style.infoCard}>{character.status}</p>
-            <p className={style.infoCard}>{character.species}</p>
-            <p className={style.infoCard}>{character.gender}</p>
-            <p className={style.infoCard}>{character.origin?.name}</p>
-          </div>
+        <div className={styles.info}>
+          <h2>{character.name}</h2>
+          <p>{character.status}</p>
+          <p>{character.species}</p>
+          <p>{character.gender}</p>
+          <p>{character.origin?.name}</p>
+          <img src={character.image} alt="img" />
         </div>
       ) : (
-        <h1 className={style3.loading}>Loading...</h1>
+        <h3>Loading...</h3>
       )}
     </div>
   );

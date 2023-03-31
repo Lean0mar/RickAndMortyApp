@@ -1,4 +1,4 @@
-.ContainerDetail{
+.conteiner{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@
     height: 100vh;
 }
 
-.loading{
+.info{
     color: rgba(1, 24, 202, 0.995);
     text-decoration: double;
     font-weight: bold;
@@ -15,15 +15,4 @@
     font-size: 300%;
     position: relative;
     top: -15vw;
-}
-
-
-@media only screen and (max-width: 376px) {
-
-    .loading{
-        color: rgba(255, 255, 255, 0.995);
-        top:0vw;
-    }
-
-
 }

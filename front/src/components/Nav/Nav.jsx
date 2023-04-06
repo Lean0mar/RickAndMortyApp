@@ -23,9 +23,6 @@ class Nav extends React.Component {
             <Link to="/home" className={styles.menuLink}>
               <h3>Home</h3>
             </Link>
-            <Link onClick={this.props.randomCharacter} className={styles.menuLink}>
-            <h3>Aleatorio</h3>
-            </Link>
             <Link to="/favorites" className={styles.menuLink}>
               <h3>Favorites</h3>
             </Link>

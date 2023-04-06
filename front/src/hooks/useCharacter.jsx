@@ -10,7 +10,6 @@ const useCharacter = () => {
 
   useEffect(() => {
     dispatch(getCharacterDetail(detailId));
-
     return () => {
       dispatch(cleanDetail());
     };

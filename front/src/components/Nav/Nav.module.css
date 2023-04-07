@@ -46,7 +46,7 @@ h3:hover {
   margin-bottom: auto;
 }
 
-.searchBar {
+.Searchbar {
   margin-left: 30px; /* Agregar esta propiedad para alinear a la derecha */
   
 }
@@ -54,6 +54,26 @@ h3:hover {
     display: flex;
     align-items: center;
     margin-left: 10px;
+}
+
+.searchInput{
+  border: 0px;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #e0e0e0;
+  height: 3em; 
+}
+
+.searchButton{
+  border: 0px;
+  border-radius:0px 15px 15px 0px;
+  background-color: #e0e0e0;
+  height: 3em;
+}
+
+.bar{
+  width: 15%;
+  display: flex;
+ 
 }
 
 

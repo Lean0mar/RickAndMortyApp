@@ -1,5 +1,4 @@
 import { useState } from "react";
-import style from "./SearchBar.module.css";
 import { Link } from "react-router-dom";
 import styles from "../Nav/Nav.module.css"
 
@@ -25,13 +24,13 @@ export default function SearchBar({ onSearch }) {
     };
 
   return (
-    <div className={style.bar}>
+    <div className={styles.bar}>
       <input
         type="search"
-        className={style.searchInput}
+        className={styles.searchInput}
         onChange={handleChange}
       />
-      <button className={style.searchButton} onClick={() => onSearch(id)}>
+      <button className={styles.searchButton} onClick={() => onSearch(id)}>
         Agregar
       </button>
       <Link to="/home" onClick={randomCharacter} className={styles.menuLink}>
